@@ -259,3 +259,7 @@ if(Math.abs(f1 - f2) < epsilon) {
 }
 
 epsilon - usually means a very small quantity
+
+
+## Decimal Types
+Penalty: arithmetic operations are massively slower with decimal
