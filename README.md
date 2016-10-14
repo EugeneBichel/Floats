@@ -1,4 +1,4 @@
-Based in pluralsight course: Math for Programmers
+Based on pluralsight course: Math for Programmers
 
 # Floating Points
 - They are not merely integers with fractions tacked on
@@ -189,3 +189,42 @@ NaN = [any sing][FF][mantissa not all zeros]
 ### What infinity / infinity
 
 infinity / infinity = NaN
+
+
+## Equality
+
+### Integers: equality is reliable because integers are exact
+
+### Floating points: not so clear-cut
+
+float f1 = 1.1f;
+float f2 = 1.05f + 0.05f;
+
+f1 != f2;
+
+What happeded?
+float f1 = an approximation to 1.1f;
+float f2 = an approximation to 1.5f +
+			an approximation to 0.05;
+			
+Important! Beware of comparing floating-points for equality
+The result might not be what you expect.
+
+Consider the following example:
+float f3 = 1.1f;
+float f4 = f3;
+
+if(f3 == f4) //true
+
+
+On the other hand:
+double d1 = 1.1;
+double d2 = (double)(float)d1;
+if(d1 == d2) //false
+
+
+## Reproducibility
+
+float f3 = 1.05f + 0.05f;
+
+result in computer1 can be not equal to result in computer2
