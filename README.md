@@ -82,6 +82,19 @@ And it is approximated value.
 	0.9
 	etc.
 	
+## Irrational Numbers
+Irrational numbers can never be represented exactly in any base!	
 	
-	
-	
+Ex.: Math.Sqrt(2) = 1.41421456...
+
+## The difference between rational and irrational
+
+Rational contains repeating part
+Irrational does not contain repeating part
+
+
+## Sum up
+- You can store exactly
+	- Integers
+	- A very small paroportion of rational numbers
+	- Nothing else

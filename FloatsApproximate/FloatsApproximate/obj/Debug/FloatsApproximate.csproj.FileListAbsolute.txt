@@ -1,6 +1,0 @@
-D:\LEARNING\Floats\FloatsApproximate\FloatsApproximate\bin\Debug\FloatsApproximate.exe.config
-D:\LEARNING\Floats\FloatsApproximate\FloatsApproximate\bin\Debug\FloatsApproximate.exe
-D:\LEARNING\Floats\FloatsApproximate\FloatsApproximate\bin\Debug\FloatsApproximate.pdb
-D:\LEARNING\Floats\FloatsApproximate\FloatsApproximate\obj\Debug\FloatsApproximate.csprojResolveAssemblyReference.cache
-D:\LEARNING\Floats\FloatsApproximate\FloatsApproximate\obj\Debug\FloatsApproximate.exe
-D:\LEARNING\Floats\FloatsApproximate\FloatsApproximate\obj\Debug\FloatsApproximate.pdb
