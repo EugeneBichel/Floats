@@ -228,3 +228,34 @@ if(d1 == d2) //false
 float f3 = 1.05f + 0.05f;
 
 result in computer1 can be not equal to result in computer2
+
+## What it means for coding
+
+- Dictionary keys
+```c#
+var dict = new Dictionary<float, stirng>();
+```
+Do not use floating point numbers as dictionary keys or hashtable keys
+
+- Equality comparison
+```c#
+if(f1 == f2)
+```
+Do not compare floating points for equality
+
+### Alternatives to Floating Point Equality
+1. can you use integers?
+//double priceDollars;
+int priceCents;
+
+2. Can you use comparison?
+//if(f1 == f2)
+if(f1 >= f2)
+
+3. Can you check for nearness in value?
+//if(f1 == f2)
+static float epsilon = 1.0e-6f;
+if(Math.abs(f1 - f2) < epsilon) {
+}
+
+epsilon - usually means a very small quantity
