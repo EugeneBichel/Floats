@@ -1,3 +1,5 @@
+Based in pluralsight course: Math for Programmers
+
 # Floating Points
 - They are not merely integers with fractions tacked on
 	- They are completely different entities from integers
@@ -60,7 +62,7 @@ And it is approximated value.
 
 - In Binary
 	- Even  fewer fractions can be represented
-		- The only fractions that can be are fractions of the form something/(2 to n)
+		- The only fractions that can be are fractions of the form something/(2 into n)
 		In other words:
 		1/2 = 0.1
 		1/4 = 0.01
@@ -92,9 +94,98 @@ Ex.: Math.Sqrt(2) = 1.41421456...
 Rational contains repeating part
 Irrational does not contain repeating part
 
-
 ## Sum up
 - You can store exactly
 	- Integers
 	- A very small paroportion of rational numbers
 	- Nothing else
+	
+## Scientific Notation (Exponential notation)
+
+1.57*(10 into 13)
+
+In principle, this is how a computer stored floating point numbers (but in binary)
+
+1.57 is mantissa (significand)
+10 is base
+13 is exponent
+
+Number = mantissa * (base into exponent)
+Negative number = -mantissa * (base into exponent)
+
+Ex.:
+
+3 = 3.00 * (10 into 0)
+30 = 3.00 * (10 into 1)
+0.03 = 3.00 * (10 into -2)
+ 
+### Takes very little space in the computer
+1.57 * (10 into 13)
+
+You need to save:
+- sign +
+- mantissa 1.57
+- exponent 13
+
+So write it like this:
+1.57E+13
+
+## Base 2 Scientific Notation (IEEE754)
+
+number = mantissa * (2 into exponent)
+negative number = -mantissa * (2 into exponent)
+
+Ex.:
+1 = 1.00*(2 into 0)
+2 = 1.00 * (2 into 1)
+3 = 1.50 * (2 into 1)
+
+### 32-bit Floating Points
+
+32 bit:
+
+- the first from left bit is Sign Bit
+- the next 8 bits are exponent
+- the last 23 bits are mantissa
+
+#### Sign Bit
+
+0 8bits 23bits  = positive number
+1 8bits 23bits = negative number
+
+#### Exponent Bits
+
+8bits of exponent represents unsigned integer
+
+### 64-bit Floating Points
+sign - 1bit
+exponent - 11bits
+mantissa - 52bits
+
+
+## Zero
+
+if exponent and mantissa are 0 then it is 0
+
+
+## Infinity
+
+### What is 1/0
+- for integers: exception
+- mathematically: infinity
+- for floating points: infinity
+
+### What is 0/0
+- mathematically: it is undefined: the answer cound be anything
+- for floating points: answer is Not-a-Number (NaN)
+
+NaN = [any sing][FF][mantissa not all zeros] 
+
+- NaN + anything = NaN
+- NaN * anything = NaN
+- 4 + infinity = infinity
+- anything / infinity = 0
+
+### What infinity / infinity
+
+infinity / infinity = NaN
